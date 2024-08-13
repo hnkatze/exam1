@@ -1,3 +1,4 @@
+import 'package:exam1/components/multi_compo.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,6 +6,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      appBar: AppBarCompo(title: 'Home'),
+      drawer: DrawerMenu(),
+      body: Center(
+        child: Text('Home Screen'),
+      ),
+    );
   }
 }
