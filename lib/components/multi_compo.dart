@@ -15,7 +15,7 @@ class DrawerMenu extends StatelessWidget {
               color: Colors.blue,
             ),
             child: Text(
-              'Exam Navigator',
+              'Exam 1 by                      Hector  Henriquez  41611213',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
