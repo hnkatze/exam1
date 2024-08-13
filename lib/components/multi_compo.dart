@@ -114,3 +114,44 @@ class CardNews extends StatelessWidget {
     );
   }
 }
+
+class CardNewsWithImage extends StatelessWidget {
+  final String title;
+  final String description;
+  final IconData icon;
+  final String imageUrl;
+
+  const CardNewsWithImage({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.icon,
+    required this.imageUrl,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: ListTile(
+                leading: Icon(icon),
+                title: Text(title),
+                subtitle: Text(description),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+              child: Image.network(
+                imageUrl,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
